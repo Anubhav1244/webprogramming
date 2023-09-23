@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return formvalidtator()">
+        <input type="text" id="req1">
+        <input type="submit" value="check input">
+    </form>
+    
+    <script>
+        function formvalidtator()
+        {
+            var usn=document.getElementById('req1')
+            alert(usn.value)
+            if(iscorrect(usn))
+            {
+                return true;
+            }
+            return false;
+        }
+        function iscorrect(usn1)
+        {
+            
+            pattern=/[0-3][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]$/
+            if(usn1.value.length===0)
+            {
+                alret("usn is empty");
+                return false;
+            }
+            else if(!usn1.value.match(pattern))
+            {
+                alert("usn shoud be DAADDAADDD")
+                return false
+            }
+            alert("usn is correct")
+            return true;
+
+        }
+    </script>
+</body>
+</html>

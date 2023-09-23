@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("enter the string")
+        if(!(isNaN(str)))
+        {
+            var rev=0,rem;
+            var num1=parseInt(str)
+            var num=parseInt(str)
+            while(num!=0)
+            {
+                rem=num%10
+                rev=rev*10+rem
+                num=parseInt(num/10)
+            }
+            document.write("the reverse of "+ num1 + " is " +rev)
+        }
+        else
+        {
+            var str1=str.toUpperCase()
+           var i;
+            for(i=0;i<str.length;i++)
+            {
+                var ch=str1.charAt(i)
+                if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+                {
+                    document.write("the left most vowel at ", i+1)
+                    break
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

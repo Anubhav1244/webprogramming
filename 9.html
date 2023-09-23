@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var var1=setInterval(intimer,1000)
+        var id_s=document.getElementById('demo')
+        var fs=5;
+        var var2;
+        function intimer()
+        {
+            id_s.innerHTML='TEXT GROWING';
+            id_s.setAttribute('style',"font-size:"+ fs +"px; color:blue;")
+            fs+=5;
+            if(fs==50)
+            {
+                clearInterval(var1);
+                var2=setInterval(detimmer,1000)
+                
+            }
+        }
+        function detimmer()
+        {
+            id_s.innerHTML='TEXT SHRINKING';
+            fs-=5;
+            id_s.setAttribute('style',"font-size:"+ fs +"px; color:red;")
+            
+            if(fs==5)
+            {
+                clearInterval(var2);
+                var1=setInterval(intimer,1000)
+                
+            }
+        }
+    </script>
+</body>
+</html>

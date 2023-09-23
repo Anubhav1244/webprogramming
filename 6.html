@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=prompt("enter the size of array")
+        var arr=prompt("enter the element of the")
+        var key=prompt("enter the key")
+        var array=arr.split(",")
+        var flag=0;
+        var low=0,high=n-1
+        var mid=parseInt((low+high)/2)
+        console.log(mid)
+        while(low<=high)
+        {
+            if(array[mid]==key)
+            {
+                alert("element is find at "+ (mid+1))
+                flag=1
+                break;
+            }
+            else if(array[mid]<key)
+            {
+                low=mid+1;
+            }
+            else
+            {
+                high=mid-1;
+            }
+            mid=parseInt((low+high)/2)
+        }
+        if(flag===0)
+        {
+            alert("element not found")
+        }
+
+    </script>
+</body>
+</html>

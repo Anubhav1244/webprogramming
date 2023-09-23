@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr{
+            border: 2px solid black;
+            text-align: center;
+            margin: 10px;
+            
+            border-collapse: collapse;
+        }
+        td{
+            border-right: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n=prompt("enter the number")
+        document.write('<h1>the first '+ n + ' number square is</h1><br>')
+        document.write('<table><tr><td>number</td><td>squares</td></tr>')
+        if(n>0)
+        {
+            for(var i=1;i<=n;i++)
+            {
+                var ans=i*i;
+                document.write('<tr><td>'+ i +'</td><td>'+ ans+'</td></tr>')
+            }
+            document.write('</table>')
+        }
+        else{
+            alert("enter the apropriate number")
+        }
+        
+        
+    </script>
+</body>
+</html>
